@@ -170,10 +170,9 @@ apt-get install -y ./liblua5.3-0_5.3.6-1build
 
 #------------utilities------------
 
-cd util
-sudo apt-get install -y curl_7.81.0-1ubuntu1.17_amd64.deb
-sudo apt-get install -y net-tools.deb
-sudo apt-get install -y ntpdate_4.2.8p15+dfsg-1ubuntu2_amd64.deb
+apt-get install -y ./curl_7.81.0-1ubuntu1.17_amd64.deb
+apt-get install -y ./net-tools.deb
+apt-get install -y ./ntpdate_4.2.8p15+dfsg-1ubuntu2_amd64.deb
 
 
 wait_for_enter
@@ -205,7 +204,6 @@ utilities=(
 for utility in "${utilities[@]}"; do
   check_command "$utility"
 done
-wait_for_enter
 green "Packages Installed, press enter to reboot..."
 wait_for_enter
 
